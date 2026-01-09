@@ -66,38 +66,3 @@ export async function DELETE(request: Request) {
     );
   }
 }
-
-export async function PATCH(
-  request: Request,
-  { params }: { params: { id: string } }
-) {
-  try {
-    if (!validateApiKey(request)) {
-      return Response.json({ error: "Unauthorized" }, { status: 401 });
-    }
-
-    await connectDB();
-
-    const body = await request.json();
-
-    body.info.tier = body.info.tier.toUpperCase();
-
-    const algorithm = await Algorithm.findByIdAndUpdate(
-      params.id,
-      { $set: body },
-      { new: true, runValidators: true }
-    );
-
-    if (!algorithm) {
-      return Response.json({ error: "Algorithm not found" }, { status: 404 });
-    }
-
-    return Response.json(algorithm, { status: 200 });
-  } catch (err) {
-    console.error("PATCH error:", err);
-    return Response.json(
-      { error: "Failed to update algorithm" },
-      { status: 500 }
-    );
-  }
-}
