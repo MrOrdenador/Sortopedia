@@ -4482,11 +4482,6 @@ styled-jsx@5.1.6:
   dependencies:
     client-only "0.0.1"
 
-sugar-high@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.npmjs.org/sugar-high/-/sugar-high-0.9.5.tgz"
-  integrity sha512-eirwp9p7QcMg6EFCD6zrGh4H30uFx2YtfiMJUavagceP6/YUUjLeiQmis7QuwqKB3nXrWXlLaRumCqOd9AKpSA==
-
 supports-color@^7.1.0:
   version "7.2.0"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz"
