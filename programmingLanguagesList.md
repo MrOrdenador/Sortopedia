@@ -1,4 +1,4 @@
-# You can find every single algorithm in [SortoPedia](https://sortopedia.vercel.app) in:
+# You can find every single algorithm in [Sortopedia](https://sortopedia.vercel.app) in:
 - JavaScript
 - TypeScript
 - Python
