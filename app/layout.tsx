@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import LenisProvider from "@/components/lenis";
+import { Header } from "@/components/header";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,11 +27,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <LenisProvider>
-          {children}
-        </LenisProvider>
+    <html lang="es" suppressHydrationWarning>
+      <body
+        className={`${geistSans.className} ${geistMono.variable} antialiased`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LenisProvider>
+            <Header />
+            {children}
+          </LenisProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

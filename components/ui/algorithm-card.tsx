@@ -1,12 +1,13 @@
-import { Button } from "@/components/ui/button"
-import { MagicCard } from "@/components/ui/shine"
-import { ChevronRight } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { MagicCard } from "@/components/ui/shine";
+import { ChevronRight } from "lucide-react";
+import { Route } from "next";
+import Link from "next/link";
 
 interface AlgorithmCardParams {
-  title: string
-  description: string
-  link: string
+  title: string;
+  description: string;
+  link: string;
 }
 
 export default function AlgorithmCard({
@@ -25,8 +26,13 @@ export default function AlgorithmCard({
         </div>
 
         <div className="flex gap-3 border-t border-dashed pt-6">
-          <Button asChild variant="outline" size="sm" className="gap-1 pr-2 shadow-none">
-            <Link href={link}>
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            className="gap-1 pr-2 shadow-none"
+          >
+            <Link href={link as Route}>
               Learn More
               <ChevronRight className="ml-0 size-3.5 opacity-50" />
             </Link>
@@ -34,5 +40,5 @@ export default function AlgorithmCard({
         </div>
       </div>
     </MagicCard>
-  )
+  );
 }
