@@ -2,7 +2,7 @@
 
 **Sortopedia: The Encyclopedia of Sorting Algorithms!**
 
-Sortopedia is an **online encyclopedia** where you can explore (almost) **every sorting algorithm out there**. Whether you're a student, developer, or algorithm enthusiast, Sortopedia makes it easy to learn, visualize, and compare sorting algorithms.
+Sortopedia is an **online encyclopedia** where you can explore (almost) **every sorting algorithm out there**.
 [https://sortopedia.vercel.app](https://sortopedia.vercel.app)
 
 **You can find**:
