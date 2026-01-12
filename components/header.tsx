@@ -1,25 +1,20 @@
-"use client";
-
-import Link from "next/link";
-import { BookOpen, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { ModeToggle } from "./mode-toggle";
+"use client"
+import Link from "next/link"
+import { BookOpen, Moon, Sun, Star } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
+import { ModeToggle } from "./mode-toggle"
 
 export const Header = () => {
-  const [shineMode, setShineMode] = useState(false);
+  const [shineMode, setShineMode] = useState(false)
 
   return (
-    <header className="fixed z-9999999 w-full transition-colors backdrop-blur-sm border-b-2 rounded-b-md">
+    <header className="fixed z-9999999 h-18.5 w-full transition-colors backdrop-blur-sm border-b-2 rounded-b-md">
       <nav className="mx-auto max-w-6xl px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link
-            href="/"
-            aria-label="home"
-            className="flex items-center gap-2 rounded-md px-2 py-1"
-          >
-            <BookOpen className="size-6 text-primary" />
-            <span className="text-xl font-bold text-foreground dark:text-foreground rounded-md font-mono tracking-tighter">
+          <Link href="/" aria-label="home" className="flex items-center gap-2 rounded-md px-2 py-1">
+            <BookOpen className="w-6 h-6" />
+            <span className="text-2xl font-bold text-foreground dark:text-foreground rounded-md">
               Sortopedia
             </span>
           </Link>
@@ -39,20 +34,16 @@ export const Header = () => {
                 className="flex items-center gap-2"
               >
                 <Star
-                  className={`size-4 ${
-                    shineMode
-                      ? "text-yellow-400 relative shine"
-                      : "text-muted-foreground"
-                  }`}
+                  className={`w-4 h-4 ${shineMode ? "text-yellow-400 relative shine" : "text-muted-foreground"}`}
                 />
                 <span>Star us on GitHub!</span>
               </Link>
             </Button>
 
-            <ModeToggle />
+            <ModeToggle/>
           </div>
         </div>
       </nav>
     </header>
-  );
-};
+  )
+}

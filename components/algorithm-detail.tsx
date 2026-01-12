@@ -71,28 +71,13 @@ export default async function AlgorithmDetail({
       </section>
 
       <section className="py-12">
-        <div className="mx-auto max-w-5xl px-6 grid gap-6 grid-cols-1 md:grid-cols-2">
+        <div className="mx-auto max-w-5xl px-6 grid gap-6 grid-cols-3">
           <Card className="self-start">
             <CardHeader>
               <CardTitle>Stats</CardTitle>
             </CardHeader>
 
             <CardContent className="space-y-4 text-sm">
-              <div className="space-y-2 font-medium">
-                <p className="text-xs text-muted-foreground uppercase tracking-wide">
-                  Tier
-                </p>
-                <span
-                  className="
-                    inline-flex items-center justify-center 
-                    w-9 h-9 text-sm font-bold 
-                    rounded-full border
-                    "
-                >
-                  {algorithm.info.tier}
-                </span>
-              </div>
-
               <div className="space-y-2">
                 <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
                   Time Complexity
@@ -160,7 +145,7 @@ export default async function AlgorithmDetail({
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="lg:col-span-2">
             <CardHeader>
               <CardTitle>Implementations</CardTitle>
             </CardHeader>

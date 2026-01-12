@@ -26,16 +26,6 @@ export default function NotFound() {
       </EmptyHeader>
       <EmptyContent>
         <NotFoundForm />
-        <EmptyDescription>
-          Need help?{" "}
-          <a
-            href="https://github.com/MrOrdenador/Sortopedia/issues/new"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Contact support
-          </a>
-        </EmptyDescription>
       </EmptyContent>
     </Empty>
   );
