@@ -38,10 +38,11 @@ export default async function StatsSection() {
             <p>Different sorting algorithms</p>
           </div>
 
-          <div className="space-y-4">
-            <div className="text-4xl md:text-5xl font-bold">
-              +{languageCount}
-            </div>
+          <div className="space-y-4 relative flex flex-col items-center">
+            <p className="absolute -top-5 left-1/2 -translate-x-1/2 pointer-events-none">
+              in more than
+            </p>
+            <div className="text-4xl md:text-5xl font-bold">{languageCount}</div>
             <p className="text-center">different programming languages</p>
           </div>
         </div>
