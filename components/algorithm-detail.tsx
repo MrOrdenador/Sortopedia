@@ -71,7 +71,7 @@ export default async function AlgorithmDetail({
       </section>
 
       <section className="py-12">
-        <div className="mx-auto max-w-5xl px-6 grid gap-6 grid-cols-3">
+        <div className="mx-auto max-w-6xl px-6 grid gap-6 grid-cols-1 md:grid-cols-2">
           <Card className="self-start">
             <CardHeader>
               <CardTitle>Stats</CardTitle>
@@ -145,7 +145,7 @@ export default async function AlgorithmDetail({
             </CardContent>
           </Card>
 
-          <Card className="lg:col-span-2">
+          <Card className="">
             <CardHeader>
               <CardTitle>Implementations</CardTitle>
             </CardHeader>

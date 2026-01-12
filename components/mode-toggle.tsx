@@ -13,17 +13,18 @@ export function ModeToggle() {
     setMounted(true);
   }, []);
 
+  if (!mounted) return null;
+
   return (
     <Button
       variant="outline"
       size="sm"
-      className="size-8 flex items-center justify-center"
+      className="w-8 h-8 flex items-center justify-center p-0"
       onClick={() =>
-        mounted &&
         setTheme(resolvedTheme === "dark" ? "light" : "dark")
       }
     >
-      {mounted && resolvedTheme === "dark" ? (
+      {resolvedTheme === "dark" ? (
         <Sun className="w-4 h-4" />
       ) : (
         <Moon className="w-4 h-4" />
