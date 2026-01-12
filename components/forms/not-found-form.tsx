@@ -21,7 +21,7 @@ export const NotFoundForm = () => {
 
     if (!route) return;
 
-    const normalizedRoute = route.startsWith("/") ? route : `/${route}`;
+    const normalizedRoute = route.startsWith("/") ? route : `/algorithms/${route}`;
 
     router.push(normalizedRoute as Route);
   };
@@ -46,7 +46,7 @@ export const NotFoundForm = () => {
       <InputGroup className="mx-auto sm:w-3/4">
         <InputGroupInput
           ref={inputRef}
-          placeholder="Try searching for pages..."
+          placeholder="Try searching for algorithms..."
           className="placeholder:text-sm"
         />
         <InputGroupAddon>

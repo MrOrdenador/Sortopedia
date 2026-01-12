@@ -44,7 +44,7 @@ export function Impls({ implementations }: CodeIDEProps) {
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`flex-1 flex items-center justify-center p-3 border-r border-border last:border-r-0 transition-colors relative cursor-pointer ${activeTab === index
+            className={`impl-tab flex-1 flex items-center justify-center p-3 border-r border-border last:border-r-0 transition-colors relative cursor-pointer ${activeTab === index
                 ? "bg-muted text-foreground"
                 : "bg-secondary text-muted-foreground hover:text-foreground hover:bg-muted"
               }`}

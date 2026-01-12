@@ -151,6 +151,20 @@ card {
   border: 1px solid var(--border);
 }
 
+button:hover {
+  background: var(--accent);
+  color: var(--accent-foreground);
+  box-shadow: 0 0 0 6px var(--hover-shadow);
+  cursor: pointer;
+}
+
+button.impl-tab:hover {
+  background: inherit;   
+  color: inherit;        
+  box-shadow: none;      
+  cursor: pointer;       
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

@@ -32,10 +32,12 @@ function StatsSectionSkeleton() {
 export default function HeroSection() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center bg-muted dark:bg-background px-6">
-      <div className="text-center mx-auto max-w-4xl mt-8">
-        <h1 className="text-balance text-4xl font-bold md:text-5xl lg:text-6xl xl:text-6xl">
-          <span className="text-primary">
-            The Encyclopedia of <u>Sorting Algorithms</u>
+      <div className="text-center mx-auto max-w-6xl mt-8">
+        <h1 className="text-balance text-primary text-6xl">
+          <b>Sortopedia:</b>
+          <br/>
+          <span>
+            The Encyclopedia of <b><u>Sorting Algorithms</u>!</b>
           </span>
         </h1>
 
