@@ -34,7 +34,11 @@ export const Header = () => {
                 className="flex items-center gap-2"
               >
                 <Star
-                  className={`w-4 h-4 ${shineMode ? "text-yellow-400 relative shine" : "text-muted-foreground"}`}
+                  className={`size-4 ${
+                    shineMode
+                      ? "text-yellow-400 relative shine"
+                      : "text-muted-foreground"
+                  }`}
                 />
                 <span>Star us on GitHub!</span>
               </Link>
@@ -45,5 +49,5 @@ export const Header = () => {
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
